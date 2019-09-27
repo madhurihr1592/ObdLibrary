@@ -157,7 +157,7 @@ public class BluetoothActivity extends AppCompatActivity implements AdapterView.
             Log.d(TAG, "Bluetooth is currently disabled...enabling");
             showBluetoothEnableDialog();
         } else {
-//            initializeLeAdapter();
+            initializeLeAdapter();
             Log.d(TAG, "Bluetooth enabled...starting services");
         }
 //        scanLeDevice();
@@ -177,9 +177,15 @@ public class BluetoothActivity extends AppCompatActivity implements AdapterView.
             alert.show();
     }
 
+    private void initializeLeAdapter() {
+        /*IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_PAIRING_REQUEST);
+        registerReceiver(mPairingRequestReceiver, filter);*/
+        leDeviceListAdapter = new LeDeviceListAdapter(this, mLeDevices);
+    }
+
 
     public void showPairedLeDevicesAndConnect() {
-        leDeviceListAdapter.clear();
+//        leDeviceListAdapter.clear();
         boolean isDeviceFound = false;
         Set<BluetoothDevice> bondedDevices = mBluetoothAdapter.getBondedDevices();
         ArrayList<BluetoothDevice> bluetoothDevices = new ArrayList<>(bondedDevices);

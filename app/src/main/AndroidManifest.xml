@@ -22,6 +22,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <service
+                android:name=".obd.ObdGatewayService"
+                android:exported="false"
+                android:launchMode="singleInstance" />
+        <service
+                android:name=".obd.MockObdGatewayService"
+                android:exported="false"
+                android:launchMode="singleInstance" />
     </application>
 
 </manifest>
