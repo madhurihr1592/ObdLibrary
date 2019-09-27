@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ObdLibrary</string>
+    <string name="text_bluetooth_nodevice">No bluetooth device found</string>
+    <string name="bluetooth_not_supported">Bluetooth is not supported</string>
+    <string name="bluetooth_enable">Enable bluetooth</string>
+    <string name="no_device_found">No Device found</string>
+    <string name="connect">Connect</string>
+    <string name="ble_not_supported">BLE not supported</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_device">Select device</string>
+</resources>
